@@ -64,7 +64,7 @@ public class TaskSolverIfElse {
         String result;
         if (age < 18){
             result = "Размер скидки 25%";
-        } else if (age > 65) {
+        } else if (age >= 65) {
             result = "Размер скидки 30%";
         } else {
             result = "Без скидки";
@@ -74,14 +74,17 @@ public class TaskSolverIfElse {
 
     public String testResult(){
         int testResult = scanner.nextInt();
+        if (testResult < 0 || testResult > 100) {
+            return "Введите результат от 0 до 100";
+        }
         String result;
-        if (testResult > 89 && testResult < 100){
+        if (testResult > 89 && testResult <= 100){
             result = "Отлично";
         } else if (testResult > 74){
             result = "Хорошо";
         } else if (testResult > 59){
             result = "Удовлетворительно";
-        } else if (testResult < 60 && testResult > 0){
+        } else if (testResult < 60 && testResult >= 0){
             result = "Неудовлетворительно";
         } else {
             result = "Введите результат от 0 до 100";

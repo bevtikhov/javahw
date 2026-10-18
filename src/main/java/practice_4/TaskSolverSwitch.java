@@ -60,6 +60,10 @@ public class TaskSolverSwitch {
 
     public String convertGrade(){
         int grade = scanner.nextInt();
+        if (grade < 0 || grade > 100) {
+            return "Балл должен быть от 0 до 100";
+        }
+
         String result;
         switch (grade / 10){
             case 10:

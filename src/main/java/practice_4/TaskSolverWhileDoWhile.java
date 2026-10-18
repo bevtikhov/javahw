@@ -6,6 +6,10 @@ public class TaskSolverWhileDoWhile {
 
     int factorial(){
         int n = scanner.nextInt();
+        if (n < 0) {
+            System.out.println("Число должно быть неотрицательным");
+            System.exit(0);
+        }
         int result = 1;
         int i = 1;
         while (i <= n){
