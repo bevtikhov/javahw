@@ -1,0 +1,4 @@
+package practice_5.task_3;
+
+public abstract class Dish implements Describable {
+}
